@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+const port = 80;
+
 const app = express();
 
 app.use(cors());
@@ -31,4 +33,4 @@ app.post("/token", async (request, response) => {
   }
 });
 
-app.listen(80);
+app.listen(port, () => console.log(`Running at port ${port}`));
