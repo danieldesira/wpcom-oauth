@@ -25,10 +25,11 @@ app.post("/token", async (request, response) => {
   });
   if (wpRes.ok) {
     const wpData = await wpRes.json();
+    console.log("Successful request for WP.com token");
     response.json(wpData);
   } else {
     response.status(401);
-    console.log(await wpRes.json());
+    console.error(`Request for token failed: ${await wpRes.json()}`);
     response.json({ message: "WP.com authentication failed" });
   }
 });
