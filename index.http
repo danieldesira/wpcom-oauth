@@ -1,8 +1,8 @@
-POST http://localhost/token
+POST http://localhost:3000/api/token
 Content-Type: application/json
 
 {
-    "code": "OCAjphlM68"
+  "code": "OCAjphlM68"
 }
 
 
